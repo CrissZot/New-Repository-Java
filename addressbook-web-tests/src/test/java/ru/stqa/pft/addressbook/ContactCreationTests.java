@@ -32,12 +32,10 @@ public class ContactCreationTests {
     gotoAddNewPage();
     ContactData(new ContactData("Имя", "Фамилия", "Город, улица, дом, квартира", "86543216545", "86546546542", "89765432132", "1@mail.ru", "2@mail.ru", "3@mail.ru"));
     homePageContact();
-    logoutSystem();
+
   }
 
-  private void logoutSystem() {
-    wd.findElement(By.linkText("Logout")).click();
-  }
+
 
   private void homePageContact() {
     wd.findElement(By.linkText("home page")).click();
@@ -77,8 +75,14 @@ public class ContactCreationTests {
 
   @AfterMethod(alwaysRun = true)
   public void tearDown() throws Exception {
+    logoutSystem();
     wd.quit();
   }
+
+  private void logoutSystem() {
+    wd.findElement(By.linkText("Logout")).click();
+  }
+
 
   private boolean isElementPresent(By by) {
     try {
