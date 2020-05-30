@@ -3,14 +3,15 @@ package ru.stqa.pft.addressbook.appmanager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class Logout {
-    WebDriver wd;
+public class Logout extends HelperBase{
+
 
     public Logout(WebDriver wd) {
-        this.wd = wd;
+        super(wd);
     }
 
-    public void logoutGroupPage() {
-        wd.findElement(By.linkText("Logout")).click();
+    public void logoutPage() {
+
+        click(By.linkText("Logout"));
     }
 }

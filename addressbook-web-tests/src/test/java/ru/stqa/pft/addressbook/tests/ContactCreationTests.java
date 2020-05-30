@@ -13,6 +13,6 @@ public class ContactCreationTests extends TestBase{
     app.getContactHelper().gotoAddNewPage();
     app.getContactHelper().ContactData(new ContactData("Имя", "Фамилия", "Город, улица, дом, квартира", "86543216545", "86546546542", "89765432132", "1@mail.ru", "2@mail.ru", "3@mail.ru"));
     app.getNavigationHelper().homePageContact();
-    app.getLogout().logoutGroupPage();
+    app.getLogout().logoutPage();
   }
 }
